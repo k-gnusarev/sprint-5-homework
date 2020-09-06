@@ -9,10 +9,14 @@
 */
 
 function anagram(str1, str2) {
-    // Напишите код здесь
+    //преобразовать строки в массивы отсортированных букв и сравнить массивы
+    return Array.from(str1.toLowerCase()).sort().toString() === Array.from(str2.toLowerCase()).sort().toString();
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(anagram('finder', 'Friend')); // true
 console.log(anagram('hello', 'bye')); // false
+
+//это для проверки, как раскладываются UP и up
+console.log('up: [' + Array.from('up'.toLowerCase()).sort().toString() + '], UP: ['+ Array.from('UP'.toLowerCase()).sort().toString() + ']');
